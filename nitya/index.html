@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://example.com/favicon.ico" type="image/x-icon">
+    
+    <title>Coldplay Official</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&family=Roboto+Slab:wght@400;700&display=swap');
+        @media (max-width: 768px) {
+        header h1 {
+        font-size: 3rem;
+        }
+        nav a {
+        font-size: 1.2rem;
+        }
+        .scroll-container {
+            flex-direction: column;
+            align-items: center;
+        }
+        .card {
+            width: 90%;
+            margin: 10px 0;
+        }
+}
+        body {
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #ff6ec7, #ffc93c, #8ce5ff, #b6ff62, #ff6ec7);
+            background-size: 300% 300%;
+            animation: gradientBG 20s ease infinite;
+            color: #ffffff;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header {
+            height: 90vh;
+            background: url('https://www.coldplay.com/wp-content/uploads/2021/10/Coldplay-Press-Image-2021.jpg') no-repeat center center/cover;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+        }
+
+        header h1 {
+            font-family: 'Roboto Slab', serif;
+            font-size: 6rem;
+            text-shadow: 2px 2px 15px rgba(255, 255, 255, 0.8);
+        }
+
+        nav {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.6rem;
+            background: linear-gradient(120deg, #ff6ec7, #ffc93c, #8ce5ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav a:hover {
+            color: #3ae374;
+        }
+
+        .content {
+            max-width: 1400px;
+            margin: -30px auto 0;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            font-family: 'Roboto Slab', serif;
+            color: #ffdc62;
+            border-bottom: 3px solid #3ae374;
+            padding-bottom: 10px;
+            margin-top: 50px;
+            font-size: 2.5rem;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .scroll-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 30px;
+            padding: 20px 0;
+        }
+
+        .scroll-container::-webkit-scrollbar {
+            height: 12px;
+        }
+
+        .scroll-container::-webkit-scrollbar-thumb {
+            background: #ffdc62;
+            border-radius: 6px;
+        }
+
+        .card {
+            background: linear-gradient(120deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2));
+            border-radius: 10px;
+            padding: 25px;
+            min-width: 250px;
+            flex-shrink: 0;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        .card h3 {
+            margin: 0;
+            font-family: 'Roboto Slab', serif;
+            color: #ffdc62;
+            font-size: 1.8rem;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        .card p {
+            margin: 10px 0 0;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            background: rgba(0, 0, 0, 0.9);
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #aaa;
+        }
+
+        ul {
+            padding-left: 30px;
+        }
+
+        ul li {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        ul li::marker {
+            color: #ffdc62;
+        }
+        
+
+
+       .social-media img {
+            width: 40px;
+            height: 40px;
+            margin: 10px;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+        .social-media img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#concerts">Concerts</a>
+            <a href="#members">Members</a>
+            <a href="#albums">Albums</a>
+        </nav>
+        <div style="text-align: center; margin-top: 20px;">
+            <img src="https://www.coldplay.com/wp/wp-content/uploads/2024/06/CP_HEART.gif" alt="Coldplay Heart" width="150px" height="150px">
+            <h1 style="font-size: 7rem; margin: 20px 0;">Welcome to Coldplay</h1>
+            <a href="#concerts" style="display: inline-block; margin-top: 20px; padding: 15px 30px; background: #ffdc62; color: #000; border-radius: 5px; font-size: 1.5rem; text-decoration: none; font-weight: bold;">Buy Tickets</a>
+        </div>
+    </header>
+    
+    
+
+    <div class="content">
+        
+        <section id="concerts" class="section">
+            
+            <h2>Upcoming Concerts</h2>
+            
+            <p>Experience the magic of Coldplay live! Check out our tour dates below:</p>
+            <ul>
+                <li>London - Wembley Stadium - June 15, 2025</li>
+                <li>New York - Madison Square Garden - July 10, 2025</li>
+                <li>Tokyo - Tokyo Dome - August 5, 2025</li>
+                <li>Sydney - ANZ Stadium - September 20, 2025</li>
+            </ul>
+        </section>
+       
+
+        <section id="members" class="section">
+            <h2>Band Members</h2>
+            <div class="scroll-container">
+                <div class="card">
+                    <img src="chrismartin .jpg" alt="Chris Martin" style="width: 300px; height: 400px;">
+                    <h3>Chris Martin</h3>
+                    <p>Lead Vocals, Piano</p>
+                </div>
+                <div class="card">
+                    <img src="jonny.jpg" alt="Jonny Buckland" style="width: 300px; height: 400px;">
+                    <h3>Jonny Buckland</h3>
+                    <p>Lead Guitar</p>
+                </div>
+                <div class="card">
+                    <img src="guy.jpg" alt="Guy Berryman" style="width: 300px; height: 400px;">
+                    <h3>Guy Berryman</h3>
+                    <p>Bass Guitar</p>
+                </div>
+                <div class="card">
+                    <img src="will.jpeg" alt="Will Champion"style="width: 300px; height: 400px;">
+                    <h3>Will Champion</h3>
+                    <p>Drums, Percussion</p>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="albums" class="section">
+            <h2>Albums</h2>
+            <div class="scroll-container">
+                <div class="card">
+                    <img src="abm1.jpg" alt="moon music" style="width: 300px; height: 300px;">
+                    <h3>Moon Music</h3>
+                    <p>Released: 2024</p>
+                    <a href="https://www.youtube.com/watch?v=caiHvJbLC-w"  style="color:yellow;">Listen</a>
+                </div>
+                <div class="card">
+                    <img src="abm2.jpg" alt="parachutes" style="width: 300px; height: 300px;">
+                    <h3>Parachutes</h3>
+                    <p>Released: 2000</p>
+                    
+                    <a href="https://www.youtube.com/watch?v=2XqpXmhM1Fc&list=PLLFaXG8eSf2-5G1s7YBcade0L2KLcy_Lv" style="color:yellow;">Listen</a>
+                </div>
+                <div class="card">
+                    <img src="abm3.jpg" alt="moon music" style="width: 300px; height: 300px;">
+                    <h3>A Rush of Blood to<br>the Head</h3>
+                    <p>Released: 2002</p>
+                    <a href="https://www.youtube.com/watch?v=SU_yGP5pR2w&list=PLKrdEuTPCNvK2WuSYLm7dIUUMSq_mUxw7"  style="color:yellow;">Listen</a>
+                </div>
+                <div class="card">
+                    <img src="abm4.jpeg" alt="moon music" style="width: 300px; height: 300px;">
+                    <h3>Mylo Xyloto</h3>
+                    <p>Released: 2011</p>
+                    <a href="https://www.youtube.com/watch?v=EJJM43SunvE&list=PLWAcD2CRDyELr_qEAEBhWA5-CKs-fz3Jo"  style="color:yellow;">Listen</a>
+                </div>
+                <div class="card">
+                    <img src="abm5.jpeg" alt="moon music" style="width: 300px; height: 300px;">
+                    <h3>Everyday Life</h3>
+                    <p>Released: 2019</p>
+                    <a href="https://www.youtube.com/watch?v=H97NQznnvZo&list=PLo6QvHZ4RyGnjOHMbNoLytCoNjpwOBQs7"  style="color:yellow;">Listen</a>
+                </div>
+                
+            </div>
+        </section>
+        <div class="social-media">
+            <h2>Follow Us</h2>
+            <a href="https://www.instagram.com/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook">
+            </a>
+            
+            
+            <a href="https://music.apple.com/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Music">
+            </a>
+            
+            <a href="https://www.youtube.com/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube">
+            </a>
+            
+           
+        </div><img src="footer-flower.webp" style="float: right;" width="100px" height="100px">
+        
+        
+    </div>
+   
+
+    <footer>
+        <p>&copy; 2025 Coldplay. All rights reserved.</p>
+    </footer>
+</body>
+</html>
